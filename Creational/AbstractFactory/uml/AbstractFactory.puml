@@ -1,0 +1,35 @@
+@startuml
+
+abstract class AbstractFactory{
+   {abstract} + createText(content);
+   {abstract} + createPicture(path,name);
+}
+class HtmlFactory extends AbstractFactory{
+    + createText(content);
+    + createPicture(path,name);
+}
+
+class JsonFactory extends AbstractFactory{
+    + createText(content);
+    + createPicture(path,name);
+}
+
+
+
+
+
+interface  MediaInterface{
+    + render();
+}
+
+abstract class Text implements  MediaInterface{
+    #  text;
+    +  __construct($text);
+}
+
+abstract class Pictrue implements  MediaInterface{
+    # path;
+    # name;
+    + __construct($path,$name = '');
+}
+@enduml

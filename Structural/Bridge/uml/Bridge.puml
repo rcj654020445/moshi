@@ -1,0 +1,28 @@
+@startuml
+abstract class Vehicle{
+    - $workShop1
+    - $workShop2
+    # __construct($workShop1,$workShop2)
+    + manuFacture()
+}
+class Car extends Vehicle{
+    + __construct($workShop1, $workShop2)
+    + manuFacture()
+}
+
+class MotorCycle extends Vehicle{
+    + __construct($workShop1, $workShop2)
+    + manuFacture()
+}
+
+interface WorkShop{
+    + function work()
+}
+
+class Assemble implements WorkShop{
+    + function work()
+}
+class Produce implements WorkShop{
+    + function work()
+}
+@enduml

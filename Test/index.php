@@ -32,7 +32,7 @@ echo $factorys[1]->createPicture('/image.jpg', 'caption')->render();
 
 /*
  * 工厂方法
- * */
+ *
 use Moshi\Creational\FactoryMethod\FactoryMethod;
 use Moshi\Creational\FactoryMethod\GermanFactory;
 use Moshi\Creational\FactoryMethod\ItalianFactory;
@@ -51,4 +51,18 @@ foreach ($factorys as $o) {
         $obj = $o->create($v);
         echo $obj->setColor($v)->getColor();
     }
+}
+*/
+
+/*
+ * 对象池模式
+ */
+use Moshi\Creational\Pool\Processor;
+use Moshi\Creational\Pool\Pool;
+use Moshi\Creational\Pool\Worker;
+$work = new Worker();
+$pool = new Pool($work);
+$Processor = new Processor($pool);
+for($i = 0;$i<6;$i++){
+    $Processor->process($i);
 }

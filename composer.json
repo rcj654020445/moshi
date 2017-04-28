@@ -11,7 +11,8 @@
     "autoload":{
         "psr-4":{
             "Moshi\\Creational\\AbstractFactory\\":"Creational/AbstractFactory",
-            "Moshi\\Creational\\FactoryMethod\\":"Creational/FactoryMethod"
+            "Moshi\\Creational\\FactoryMethod\\":"Creational/FactoryMethod",
+            "Moshi\\Creational\\Pool\\":"Creational/Pool"
         }
     }
 }

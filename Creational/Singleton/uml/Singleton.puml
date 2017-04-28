@@ -1,0 +1,11 @@
+@startuml
+
+class Singleton{
+    # {static} $instance;
+    # __construct();
+    + {static}getInstance();
+    # __clone();
+    # __wakeup();
+}
+
+@enduml

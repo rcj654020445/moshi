@@ -9,12 +9,17 @@ class ComposerStaticInita11d0bb501deffa62b8345bd1da5d5ee
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
+            'Moshi\\Creational\\Pool\\' => 22,
             'Moshi\\Creational\\FactoryMethod\\' => 31,
             'Moshi\\Creational\\AbstractFactory\\' => 33,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Moshi\\Creational\\Pool\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Creational/Pool',
+        ),
         'Moshi\\Creational\\FactoryMethod\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Creational/FactoryMethod',

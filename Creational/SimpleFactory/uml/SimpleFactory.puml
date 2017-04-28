@@ -1,0 +1,19 @@
+@startuml
+interface VehicleInterface{
+    +dreiveTo();
+}
+
+class Bicycle implements VehicleInterface{
+ + dreiveTo();
+}
+
+class Scooter implements VehicleInterface{
+ + dreiveTo();
+}
+
+class SimpleFactory{
+    # typeList;
+    + __construct();
+    + createVehicle($type);
+}
+@enduml

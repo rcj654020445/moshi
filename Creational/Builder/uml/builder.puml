@@ -1,0 +1,42 @@
+@startuml
+interface BuilderInterface{
+    + createVehicle()
+    + addDoors()
+    + addWheel()
+    + addEngine()
+    + getVehicle()
+}
+
+class BikeBuilder implements BuilderInterface{
+    # bike
+    + createVehicle()
+    + addDoors()
+    + addWheel()
+    + addEngine()
+    + getVehicle()
+}
+
+class CarBuilder implements BuilderInterface{
+    # car
+    + createVehicle()
+    + addDoors()
+    + addWheel()
+    + addEngine()
+    + getVehicle()
+}
+
+abstract class Vehicle{
+    # attribute
+    + setAttribute(key, value)
+}
+
+class Bike extends Vehicle{
+}
+
+class Car extends Vehicle{
+}
+
+class Director{
+    + builder(BuildInterface $builder)
+}
+@enduml

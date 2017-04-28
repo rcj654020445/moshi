@@ -1,0 +1,27 @@
+@startuml
+interface PaperBookInterface{
+    + open();
+    + turnPage();
+}
+
+class EBookAdapter implements PaperBookInterface{
+    - $ebook;
+    + __construct(EbookInterface $ebook)
+    + open()
+    + turnPage()
+}
+interface EbookInterface{
+    + pressNext();
+    + pressStart();
+}
+
+class Book implements PaperBookInterface{
+    + open()
+    + turnPage()
+}
+
+class Kindle implements EbookInterface{
+    + pressNext()
+    + pressStart()
+}
+@enduml

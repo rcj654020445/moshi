@@ -1,0 +1,14 @@
+@startuml
+interface FormatterInterface{
+}
+
+class FormatterNumber implements FormatterInterface{
+}
+
+class FormatterString implements FormatterInterface{
+}
+
+class StaticFactory{
++ {static} creteFormatter(FormatterInterface $type)
+}
+@enduml

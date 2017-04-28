@@ -1,0 +1,36 @@
+@startuml
+abstract class FactoryMethod{
+    CHEAP=1;
+    FAST=1;
+    # {abstract}  createVehicle(type)
+    + create(type)
+}
+
+class GermanFactory extends FactoryMethod{
+    # createVehicle(type)
+}
+
+class ItalianFactory extends FactoryMethod{
+    # createVehicle(type)
+}
+
+interface VehicleInterface {
+    + setColor(rgb)
+}
+
+class Bicycle implements VehicleInterface{
+    # color
+    + setColor(rgb)
+}
+
+class Ferrari implements VehicleInterface{
+    # color
+    + setColor(rgb)
+}
+
+class Porsche implements VehicleInterface{
+    # color
+    + setColor(rgb)
+    + addTuningAMG()
+}
+@enduml

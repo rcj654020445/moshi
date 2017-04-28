@@ -1,0 +1,27 @@
+@startuml
+class Processor{
+        - $pool
+        - $processing
+        - $maxProcess
+        - $waitQueue
+        + __construct($pool)
+        + process($image)
+        + createWorker($image)
+        + processDone($worker)
+        + pushToWaitingQueue($image)
+        + popFromWaitingQueue()
+}
+
+class Pool{
+    - $class
+    - $instance
+    + __construct($class)
+    + get()
+    + dispose($instance)
+}
+
+class Worker{
+    + __construct()
+    + run()
+}
+@enduml

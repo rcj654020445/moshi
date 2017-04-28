@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Moshi\\Creational\\Pool\\' => array($baseDir . '/Creational/Pool'),
     'Moshi\\Creational\\FactoryMethod\\' => array($baseDir . '/Creational/FactoryMethod'),
     'Moshi\\Creational\\AbstractFactory\\' => array($baseDir . '/Creational/AbstractFactory'),
 );
